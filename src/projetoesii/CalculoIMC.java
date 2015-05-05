@@ -13,6 +13,7 @@ public class CalculoIMC {
     private double result=0;
     
        public double getResult() {
+        
         return result;
     }
 
@@ -21,14 +22,19 @@ public class CalculoIMC {
     }
     
     
-    public void imcH(Pessoa pessoa){
+    public double imcH(Pessoa pessoa){
         
         double altura=pessoa.getAltura();
         double peso = pessoa.getPeso();
 
         result = Math.ceil((peso)/(altura*altura));
-        System.out.println(result);
+       
+           System.out.println(result);
+         return result;
+       
     }
+    
+   
         
         public void resultadoHomem(){
         
@@ -49,13 +55,15 @@ public class CalculoIMC {
        
     }
     
-    public void imcM(Pessoa pessoa){
+    public double imcM(Pessoa pessoa){
         
         double altura=pessoa.getAltura();
         double peso = pessoa.getPeso();
         
         result = Math.ceil((peso)/(altura*altura));
+       
         System.out.println(result);
+         return result;
     }
     
     public void resultadoMulher(){
