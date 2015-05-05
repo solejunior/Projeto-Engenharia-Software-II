@@ -31,6 +31,7 @@ public class ProjetoESII {
         
         CalculoIMC alo = new CalculoIMC();
         alo.imcM(bruna);
+        alo.resultadoMulher();
         
         
         
