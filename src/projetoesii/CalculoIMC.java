@@ -25,21 +25,25 @@ public class CalculoIMC {
         
         double altura=pessoa.getAltura();
         double peso = pessoa.getPeso();
+
+        result = Math.ceil((peso)/(altura*altura));
+        System.out.println(result);
+    }
         
-        result = (peso)/(altura*altura);
+        public void resultadoHomem(){
         
          if(result>= 17.9 && result <=18.9){
-            System.out.println("RISCO BAIXO: \"Homem, Você está abaixo do peso recomendado. \"");
+            System.out.println("RISCO BAIXO, IMC= "+result+" \"Homem, Você está abaixo do peso recomendado. \"");
         }else
             if (result >=19 && result <=24.9 ){
-                System.out.println(" - IDEAL: \"Homem, Você está muito bem! Continue assim!\" ");
+                System.out.println(" - IDEAL: IMC= "+result+" \"Homem, Você está muito bem! Continue assim!\" ");
             }else
                 if(result >=25 && result <= 27.7){
-                    System.out.println("- RISCO MODERADO: \"Homem, Você está acima do peso recomendado. Cuidado!\"");
+                    System.out.println("- RISCO MODERADO: IMC= "+result+" \"Homem, Você está acima do peso recomendado. Cuidado!\"");
                 }else
                     if
                     (result >27.8){
-                        System.out.println("- RISCO ELEVADO: Homem, Você está Obeso. Procure o acompanhamento de um nutricionista e realizar mais atividades físicas!");
+                        System.out.println("- RISCO ELEVADO: IMC= "+result+", Homem, Você está Obeso. Procure o acompanhamento de um nutricionista e realizar mais atividades físicas!");
     }
         
        
@@ -50,20 +54,24 @@ public class CalculoIMC {
         double altura=pessoa.getAltura();
         double peso = pessoa.getPeso();
         
-        result = (peso)/(altura*altura);
+        result = Math.ceil((peso)/(altura*altura));
+        System.out.println(result);
+    }
+    
+    public void resultadoMulher(){
         
          if(result>= 15 && result <=17.9){
-            System.out.println("RISCO BAIXO: \" Mulher, Você está abaixo do peso recomendado. \"");
+            System.out.println("RISCO BAIXO: IMC= "+result+", \" Mulher, Você está abaixo do peso recomendado. \"");
         }else
             if (result >=18 && result <=24.4 ){
-                System.out.println("- PESO IDEAL: Mulher, Você está muito bem! Continue assim! ");
+                System.out.println("- PESO IDEAL: IMC= "+result+", Mulher, Você está muito bem! Continue assim! ");
             }else
                 if(result >=24.5 && result <= 27.2){
-                    System.out.println("- RISCO MODERADO: \" Mulher, Você está acima do peso recomendado. Cuidado!\"");
+                    System.out.println("- RISCO MODERADO: IMC= "+result+",  \" Mulher, Você está acima do peso recomendado. Cuidado!\"");
                 }else
                     if
                     (result >27.3){
-                        System.out.println("- RISCO ELEVADO: Mulher, Você está Obeso. Procure o acompanhamento de um nutricionista e realizar mais atividades físicas!");
+                        System.out.println("- RISCO ELEVADO: IMC= "+result+", Mulher, Você está Obeso. Procure o acompanhamento de um nutricionista e realizar mais atividades físicas!");
     }
         
        
